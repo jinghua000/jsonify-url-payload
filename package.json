@@ -1,0 +1,32 @@
+{
+  "name": "jsonify-url-payload",
+  "version": "0.0.1",
+  "description": "Add some json stringify payload to url.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha test/*.spec.ts --extension ts --require ts-node/register"
+  },
+  "keywords": [
+    "jsonify",
+    "url",
+    "payload"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinghua000/jsonify-url-payload.git"
+  },
+  "author": "shadow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jinghua000/jsonify-url-payload/issues"
+  },
+  "homepage": "https://github.com/jinghua000/jsonify-url-payload#readme",
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "assert": "^2.0.0",
+    "mocha": "^6.2.2",
+    "shadow-fns": "^0.1.4",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}
