@@ -6,7 +6,7 @@ export function mixer (
   return ''
 }
 
-export function resolver (
+export function parser (
   url: string
 ): object {
   return {}

@@ -1,1 +1,1 @@
-export { mixer, resolver } from './core'
+export { mixer, parser } from './core'
