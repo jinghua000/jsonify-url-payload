@@ -46,11 +46,11 @@ function encode (params: object): string {
 function decode (str: string): object {
   if (!str) return {}
 
-  const handleArr = apply(merge)
-  const handleElem = pipe(split(E_MARK), (arr: string[]) => ({
+  const handleArr: (args: object[]) => object = apply(merge)
+  const handleElem: (str: string) => object = pipe(split(E_MARK), (arr: string[]) => ({
     [natvieDecode(arr[0])]: safeParse(natvieDecode(arr[1]))
   }))
-  const paramsArr = str.split(A_MARK).map(handleElem)
+  const paramsArr: object[] = str.split(A_MARK).map(handleElem)
 
   return handleArr(paramsArr)
 }
