@@ -529,10 +529,10 @@ set-blocking@^2.0.0:
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
   integrity sha1-BF+XgtARrppoA93TgrJDkrPYkPc=
 
-shadow-fns@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/shadow-fns/-/shadow-fns-0.1.4.tgz#764cd4a12aaabb00c78eaa57c381dc110aee00e6"
-  integrity sha512-KJX12rbTBAtSXdEX+klZH3enI+2aqiXCLi1arPsFN6+FSmV6mJhxDny1vg2yMSZSZFeDRxJO70NBFnDErL/O/g==
+shadow-fns@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/shadow-fns/-/shadow-fns-0.1.5.tgz#b79c43e31f250db7016a97fef83250ec9b719ba8"
+  integrity sha512-s+2haobEgx4R8qbut3hgGy4NMdHYu2PGl5kzRduGOOHy33MrgK2E9iAE8r82QNnjiRGA5+sEcY+k41Kw0n/q2g==
 
 source-map-support@^0.5.6:
   version "0.5.16"

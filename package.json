@@ -4,7 +4,7 @@
   "description": "Add some json stringify payload to url.",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha test/*.spec.ts --extension ts --require ts-node/register"
+    "test": "mocha --extension ts --require ts-node/register"
   },
   "keywords": [
     "jsonify",
@@ -25,7 +25,7 @@
     "@types/mocha": "^5.2.7",
     "assert": "^2.0.0",
     "mocha": "^6.2.2",
-    "shadow-fns": "^0.1.4",
+    "shadow-fns": "^0.1.5",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
   }
