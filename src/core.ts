@@ -15,6 +15,14 @@ import {
   merge 
 } from 'shadow-fns'
 
+const mergeArray: (args: object[]) => object = apply(merge)
+const handleElementForURL: (str: string) => object = pipe(
+  split(E_MARK), 
+  (arr: string[]) => ({
+    [natvieDecode(arr[0])]: safeParse(natvieDecode(arr[1]))
+  })
+)
+
 export function mixer (url: string, params: object): string {
   const arr: string[] = []
   arr.push(url)
@@ -46,11 +54,7 @@ function encode (params: object): string {
 function decode (str: string): object {
   if (!str) return {}
 
-  const handleArr: (args: object[]) => object = apply(merge)
-  const handleElem: (str: string) => object = pipe(split(E_MARK), (arr: string[]) => ({
-    [natvieDecode(arr[0])]: safeParse(natvieDecode(arr[1]))
-  }))
-  const paramsArr: object[] = str.split(A_MARK).map(handleElem)
+  const paramsArr: object[] = str.split(A_MARK).map(handleElementForURL)
 
-  return handleArr(paramsArr)
+  return mergeArray(paramsArr)
 }
