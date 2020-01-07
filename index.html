@@ -1,0 +1,10 @@
+<script src="./dist/jsonify-url-payload.umd.js"></script>
+<script>
+
+const { mixer, parser } = jsonifyURL
+
+const url = mixer('127.0.0.1', { a: 123 })
+console.log(url)
+console.log(parser(url))
+
+</script>
