@@ -136,7 +136,7 @@ const equals = _curry2((x, e) => {
     if (length !== x.length) return false
 
     for (let i = 0; i < length; i++) {
-      if (!equals(x[i])(e[i])) return false
+      if (!equals(x[i], e[i])) return false
     }
 
     return true
@@ -149,7 +149,7 @@ const equals = _curry2((x, e) => {
     if (length !== keys(x).length) return false
 
     for (let k of _keys) {
-      if (!equals(x[k])(e[k])) return false
+      if (!equals(x[k], e[k])) return false
     }
 
     return true
@@ -234,63 +234,6 @@ const isEmpty = e => [
  * splitWithBlank(str) // => ['i', 'have', 'a', 'plan']
  */
 const split = _nativeSelfFn('split');
-
-/**
- * Pass the first `n` parameters to supplied function and ignore others
- * 
- * @param {Number} n 
- * @param {Function} fn
- * @return {Function}
- * @since 0.1.0
- * @category Function, curry2
- * @see unary, binary
- * @sign Number -> ((a, b, ..., z) -> result) -> ((a, b, ..., n) -> result)
- * @example
- * 
- * let printThree = (a, b, c) => [a, b, c]
- * printThree(1, 2, 3) // => [1, 2, 3]
- * 
- * let printTwo = f.nAry(2)(printThree)
- * printTwo(1, 2, 3) // => [1, 2, undefined]
- */
-const nAry = _curry2((n, fn) => (...args) => fn(...args.slice(0, n)));
-
-/**
- * Pass the first parameters to supplied function and ignore others
- * 
- * @param {Function} fn
- * @return {Function}
- * @since 0.1.0
- * @category Function
- * @sign ((a, b, ..., z) -> result) -> (a -> result)
- * @see binary, uAry
- * @example
- * 
- * let arr = [1, 2, 3]
- * 
- * arr.map(parseInt) // => [1, NaN, NaN]
- * arr.map(f.unary(parseInt)) // => [1, 2, 3]
- */
-const unary = nAry(1);
-
-/**
- * Pass the first two parameters to supplied function and ignore others
- * 
- * @param {Function} fn
- * @return {Function}
- * @since 0.1.0
- * @category Function
- * @sign ((a, b, ..., z) -> result) -> ((a, b) -> result)
- * @see unary, uAry
- * @example
- * 
- * let printThree = (a, b, c) => [a, b, c]
- * printThree(1, 2, 3) // => [1, 2, 3]
- * 
- * let printTwo = f.binary(printThree)
- * printTwo(1, 2, 3) // => [1, 2, undefined]
- */
-const binary = nAry(2);
 
 /**
  * Pass the array to the function 
