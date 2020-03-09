@@ -1,5 +1,10 @@
 # jsonify-url-payload
 
+[![Build Status](https://travis-ci.org/jinghua000/jsonify-url-payload.svg?branch=master)](https://travis-ci.org/jinghua000/jsonify-url-payload)
+[![npm module](https://badge.fury.io/js/jsonify-url-payload.svg)](https://www.npmjs.com/package/jsonify-url-payload)
+[![Coverage Status](https://coveralls.io/repos/github/jinghua000/jsonify-url-payload/badge.svg?branch=master)](https://coveralls.io/github/jinghua000/jsonify-url-payload?branch=master)
+[![Dependency Status](https://david-dm.org/jinghua000/jsonify-url-payload.svg)](https://david-dm.org/jinghua000/jsonify-url-payload)
+
 ## Introduction
 
 Mix jsonify payload to URL.
@@ -44,4 +49,4 @@ const myPayload = parser(myURL)
 // => { a: 1, b: '2', c: [3], d: { e: '你好' } }
 ```
 
-See also [test cases](./test/README.md).
+See also [test cases](https://github.com/jinghua000/jsonify-url-payload/blob/master/test/README.md).
