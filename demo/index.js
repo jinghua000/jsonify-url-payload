@@ -1,9 +1,9 @@
 const { mixer, parser } = require('../dist/jsonify-url-payload.cjs')
 
-const url = mixer('127.0.0.1', { a: 123, b: '我我我', c: [1, 2, { num: 0 }] })
+const myURL = mixer('127.0.0.1', { a: 1, b: '2', c: [3], d: { e: '你好' } })
 
 console.log(`====================`)
-console.log(`mixed url:`, url)
+console.log(`mixed:`, myURL)
 console.log(`====================`)
-console.log(`parsed url:`, parser(url))
+console.log(`parsed:`, parser(myURL))
 console.log(`====================`)
