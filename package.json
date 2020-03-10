@@ -1,6 +1,6 @@
 {
   "name": "jsonify-url-payload",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add or parse some json stringified payload to url.",
   "main": "dist/jsonify-url-payload.cjs.js",
   "module": "dist/jsonify-url-payload.esm.js",
