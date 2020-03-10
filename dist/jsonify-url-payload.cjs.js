@@ -264,6 +264,18 @@ var handleElementForURL = pipe(split(E_MARK), function (arr) {
         _a[natvieDecode(arr[0])] = safeParse(natvieDecode(arr[1])),
         _a);
 });
+/**
+ * Mixer jsonified payload to supplied URL,
+ * will remain the types of payloads.
+ *
+ * @param {string} url
+ * @param {object} params
+ * @returns {string}
+ * @example
+ *
+ * mixer('127.0.0.1', { a: 1, b: '2', c: [3], d: { e: '你好' } })
+ * // => 127.0.0.1?a=1&b=%222%22&c=%5B3%5D&d=%7B%22e%22%3A%22%E4%BD%A0%E5%A5%BD%22%7D
+ */
 function mixer(url, params) {
     var arr = [];
     arr.push(url);
@@ -273,6 +285,16 @@ function mixer(url, params) {
     }
     return arr.join('');
 }
+/**
+ * Parse the jsonfied payload URL and return the payload.
+ *
+ * @param {string} url
+ * @returns {object}
+ * @example
+ *
+ * const myURL = mixer('127.0.0.1', { a: 1, b: '2', c: [3], d: { e: '你好' } })
+ * parser(myURL) // => { a: 1, b: '2', c: [3], d: { e: '你好' } }
+ */
 function parser(url) {
     var str = url.split(Q_MARK)[1] || '';
     return decode(str);
