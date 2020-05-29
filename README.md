@@ -49,4 +49,11 @@ const myPayload = parser(myURL)
 // => { a: 1, b: '2', c: [3], d: { e: '你好' } }
 ```
 
+If something cannot parsed by JSON will return `undefined`
+
+```js
+parser('127.0.0.1?aa=aa')
+// => { aa: undefined }
+```
+
 See also [test cases](https://github.com/jinghua000/jsonify-url-payload/blob/master/test/README.md).
